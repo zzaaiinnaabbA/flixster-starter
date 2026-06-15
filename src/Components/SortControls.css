@@ -1,0 +1,110 @@
+.sort-controls {
+  position: relative;
+}
+
+.sort-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color var(--transition-default);
+}
+
+.sort-toggle:hover {
+  color: var(--color-accent-purple);
+}
+
+.sort-toggle:focus-visible {
+  outline: 2px solid var(--color-accent-purple);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.sort-arrow {
+  transition: transform var(--transition-default);
+}
+
+.sort-arrow.open {
+  transform: rotate(180deg);
+}
+
+.sort-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: var(--color-tertiary-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  padding: var(--spacing-xs) 0;
+  min-width: 150px;
+  z-index: 100;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sort-option {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-default);
+}
+
+.sort-option:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+  color: var(--color-text-primary);
+}
+
+.sort-option.active {
+  color: var(--color-accent-purple);
+  font-weight: 600;
+  background-color: rgba(100, 108, 255, 0.15);
+}
+
+.sort-option:focus-visible {
+  outline: 2px solid var(--color-accent-purple);
+  outline-offset: -2px;
+}
+
+@media (max-width: 768px) {
+  .sort-toggle {
+    font-size: 0.85rem;
+  }
+
+  .sort-dropdown {
+    min-width: 130px;
+  }
+
+  .sort-option {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sort-toggle {
+    font-size: 0.8rem;
+  }
+}

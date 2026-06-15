@@ -1,0 +1,93 @@
+/*
+Pinterest/Masonry Style Layout - Asymmetrical Collage
+*/
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 50px; /* Small base row height for flexibility */
+  gap: 16px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Create asymmetrical sizes - random row spans */
+.movie-list > :nth-child(6n+1) {
+  grid-row: span 8; /* Tall card */
+}
+
+.movie-list > :nth-child(6n+2) {
+  grid-row: span 6; /* Medium card */
+}
+
+.movie-list > :nth-child(6n+3) {
+  grid-row: span 7; /* Medium-tall card */
+}
+
+.movie-list > :nth-child(6n+4) {
+  grid-row: span 5; /* Short card */
+}
+
+.movie-list > :nth-child(6n+5) {
+  grid-row: span 9; /* Extra tall card */
+}
+
+.movie-list > :nth-child(6n+6) {
+  grid-row: span 6; /* Medium card */
+}
+
+/* Tablet: 600px - 1024px */
+@media (max-width: 1024px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 40px;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  /* Adjust heights for tablet */
+  .movie-list > :nth-child(6n+1) {
+    grid-row: span 7;
+  }
+  .movie-list > :nth-child(6n+2) {
+    grid-row: span 5;
+  }
+  .movie-list > :nth-child(6n+3) {
+    grid-row: span 6;
+  }
+  .movie-list > :nth-child(6n+4) {
+    grid-row: span 5;
+  }
+  .movie-list > :nth-child(6n+5) {
+    grid-row: span 8;
+  }
+  .movie-list > :nth-child(6n+6) {
+    grid-row: span 6;
+  }
+}
+
+/* Mobile: < 600px - Keep it simpler on mobile */
+@media (max-width: 600px) {
+  .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-auto-rows: 35px;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  /* Simpler pattern for mobile */
+  .movie-list > :nth-child(4n+1) {
+    grid-row: span 6;
+  }
+  .movie-list > :nth-child(4n+2) {
+    grid-row: span 5;
+  }
+  .movie-list > :nth-child(4n+3) {
+    grid-row: span 7;
+  }
+  .movie-list > :nth-child(4n+4) {
+    grid-row: span 5;
+  }
+}
