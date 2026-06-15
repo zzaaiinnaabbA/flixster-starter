@@ -5,6 +5,7 @@ const Banner = ({ apiKey }) => {
   const [movies, setMovies] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
   useEffect(() => {
     const fetchFeaturedMovies = async () => {
@@ -30,15 +31,27 @@ const Banner = ({ apiKey }) => {
   }, [apiKey])
 
   const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? movies.length - 1 : prev - 1))
+    setIsTransitioning(true)
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === 0 ? movies.length - 1 : prev - 1))
+      setIsTransitioning(false)
+    }, 300)
   }
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === movies.length - 1 ? 0 : prev + 1))
+    setIsTransitioning(true)
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === movies.length - 1 ? 0 : prev + 1))
+      setIsTransitioning(false)
+    }, 300)
   }
 
   const handleDotClick = (index) => {
-    setCurrentIndex(index)
+    setIsTransitioning(true)
+    setTimeout(() => {
+      setCurrentIndex(index)
+      setIsTransitioning(false)
+    }, 300)
   }
 
   if (isLoading || movies.length === 0) {
@@ -67,7 +80,7 @@ const Banner = ({ apiKey }) => {
         <img
           src={backdropUrl}
           alt={`${movie.title} backdrop`}
-          className="banner-image"
+          className={`banner-image ${isTransitioning ? 'fade-out' : 'fade-in'}`}
         />
       )}
       <div className="banner-overlay"></div>

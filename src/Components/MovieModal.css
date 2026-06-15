@@ -4,7 +4,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,14 +26,18 @@
 }
 
 .modal-content {
-  background-color: var(--color-tertiary-dark);
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: var(--radius-md);
   max-width: 900px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(100, 108, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8),
+              0 0 0 1px rgba(100, 108, 255, 0.3),
+              0 0 40px rgba(100, 108, 255, 0.1);
   animation: slideUp 0.3s ease;
 }
 
@@ -44,6 +50,25 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Sequential slide-up for modal content */
+.modal-poster {
+  opacity: 0;
+  animation: slideUp 0.4s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.modal-info {
+  opacity: 0;
+  animation: slideUp 0.4s ease forwards;
+  animation-delay: 0.25s;
+}
+
+.modal-trailer {
+  opacity: 0;
+  animation: slideUp 0.4s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .modal-close {

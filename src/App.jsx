@@ -3,6 +3,8 @@ import './App.css'
 import Header from './Components/Header'
 import Sidebar from './Components/Sidebar'
 import Banner from './Components/Banner'
+import TrailerCarousel from './Components/TrailerCarousel'
+import SortBar from './Components/SortBar'
 import Footer from './Components/Footer'
 import MovieList from './Components/MovieList'
 import MovieModal from './Components/MovieModal'
@@ -204,6 +206,14 @@ const App = () => {
     )
   }
 
+  const handleHomeClick = () => {
+    setSearchQuery('')
+    setFilterOption('all')
+    setCurrentPage(1)
+    setIsSidebarOpen(false)
+    fetchNowPlaying(1)
+  }
+
   const getFilteredAndSortedMovies = () => {
     let filteredMovies = [...movies]
 
@@ -241,8 +251,7 @@ const App = () => {
       <Header
         onSearch={handleSearch}
         currentQuery={searchQuery}
-        sortOption={sortOption}
-        onSortChange={setSortOption}
+        onHomeClick={handleHomeClick}
       />
 
       <Sidebar
@@ -256,6 +265,10 @@ const App = () => {
 
       <main className={`main-content ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
         {!searchQuery && filterOption === 'all' && <Banner apiKey={API_KEY} />}
+
+        {!searchQuery && filterOption === 'all' && <TrailerCarousel apiKey={API_KEY} />}
+
+        <SortBar sortOption={sortOption} onSortChange={setSortOption} />
 
         {searchQuery && (
           <button

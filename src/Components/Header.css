@@ -1,8 +1,13 @@
 .header {
-  background-color: #000000;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 16px 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(100, 108, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-content {
@@ -24,17 +29,41 @@
 
 .header-title {
   margin: 0;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--color-accent-purple);
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg,
+    #a78bfa 0%,
+    #646cff 50%,
+    #ec4899 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-family: 'Inter', sans-serif;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
   text-align: left;
-  transition: color var(--transition-default);
+  transition: all 0.3s ease;
+  animation: gradientShift 4s ease infinite;
+  filter: drop-shadow(0 0 8px rgba(100, 108, 255, 0.3));
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .header-title:hover {
-  color: var(--color-accent-purple-hover);
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(100, 108, 255, 0.5))
+          drop-shadow(0 0 20px rgba(236, 72, 153, 0.3));
+  letter-spacing: 0px;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (max-width: 768px) {
