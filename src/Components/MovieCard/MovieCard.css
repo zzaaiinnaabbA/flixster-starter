@@ -15,9 +15,9 @@
 
 .movie-card:hover {
   transform: translateY(-8px) rotateX(5deg) rotateY(5deg) scale(1.03);
-  box-shadow: 0 20px 40px rgba(100, 108, 255, 0.3),
-              0 0 20px rgba(100, 108, 255, 0.2),
-              0 0 0 1px rgba(100, 108, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(20, 184, 166, 0.3),
+              0 0 20px rgba(20, 184, 166, 0.2),
+              0 0 0 1px rgba(20, 184, 166, 0.15);
 }
 
 .movie-card:focus-visible {
@@ -114,18 +114,18 @@
 }
 
 .favorite-button.active {
-  color: var(--color-accent-purple);
-  background-color: rgba(100, 108, 255, 0.2);
+  color: var(--color-accent-orange);
+  background-color: rgba(20, 184, 166, 0.2);
 }
 
 .watched-button.active {
   color: var(--color-accent-purple);
-  background-color: rgba(100, 108, 255, 0.2);
+  background-color: rgba(177, 156, 217, 0.2);
 }
 
 /* Visual distinction for favorited cards */
 .movie-card.favorited {
-  border-color: var(--color-accent-purple);
+  border-color: var(--color-accent-orange);
 }
 
 /* Visual distinction for watched cards */

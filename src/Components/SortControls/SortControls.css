@@ -61,14 +61,14 @@
 }
 
 .sort-option:hover {
-  background-color: rgba(100, 108, 255, 0.1);
+  background-color: rgba(177, 156, 217, 0.1);
   color: var(--color-text-primary);
 }
 
 .sort-option.active {
   color: var(--color-accent-purple);
   font-weight: 600;
-  background-color: rgba(100, 108, 255, 0.15);
+  background-color: rgba(177, 156, 217, 0.15);
 }
 
 .sort-option:focus-visible {

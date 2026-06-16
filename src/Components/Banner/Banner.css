@@ -113,22 +113,22 @@
   display: inline-block;
   margin-top: var(--spacing-xl);
   padding: 14px 32px;
-  background-color: var(--color-accent-purple);
+  background-color: var(--color-accent-orange);
   color: var(--color-text-primary);
   font-size: 1rem;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
   transition: all var(--transition-default);
-  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
   border: none;
   cursor: pointer;
 }
 
 .banner-button:hover {
-  background-color: var(--color-accent-purple-hover);
+  background-color: var(--color-accent-orange-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(100, 108, 255, 0.5);
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.5);
 }
 
 .banner-button:active {
@@ -157,7 +157,7 @@
 }
 
 .banner-arrow:hover {
-  background-color: rgba(100, 108, 255, 0.8);
+  background-color: rgba(177, 156, 217, 0.8);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -202,8 +202,8 @@
 }
 
 .banner-dot.active {
-  background-color: var(--color-accent-purple);
-  border-color: var(--color-accent-purple);
+  background-color: var(--color-accent-orange);
+  border-color: var(--color-accent-orange);
   transform: scale(1.3);
 }
 
