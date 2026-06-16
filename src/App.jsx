@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import Header from './Components/Header'
-import Sidebar from './Components/Sidebar'
-import Banner from './Components/Banner'
-import TrailerCarousel from './Components/TrailerCarousel'
-import SortBar from './Components/SortBar'
-import Footer from './Components/Footer'
-import MovieList from './Components/MovieList'
-import MovieModal from './Components/MovieModal'
+import Header from './Components/Header/Header'
+import Sidebar from './Components/SideBar/Sidebar'
+import Banner from './Components/Banner/Banner'
+import TrailerCarousel from './Components/TrailerCarousel/TrailerCarousel'
+import SortBar from './Components/SortBar/SortBar'
+import Footer from './Components/Footer/Footer'
+import MovieList from './Components/MovieList/MovieList'
+import MovieModal from './Components/MovieModal/MovieModal'
 
 const API_KEY = import.meta.env.VITE_API_KEY
 

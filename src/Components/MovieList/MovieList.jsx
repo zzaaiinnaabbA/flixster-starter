@@ -1,4 +1,4 @@
-import MovieCard from './MovieCard'
+import MovieCard from '../MovieCard/MovieCard'
 import './MovieList.css'
 
 const MovieList = ({ movies, onMovieClick, favorites, watched, onToggleFavorite, onToggleWatched }) => {

@@ -19,6 +19,11 @@ const SearchBar = ({ onSearch, currentQuery }) => {
     }
   }
 
+  const handleClear = () => {
+    setQuery('')
+    onSearch('')
+  }
+
   return (
     <div className="search-bar">
       <form onSubmit={handleSubmit}>
@@ -30,6 +35,16 @@ const SearchBar = ({ onSearch, currentQuery }) => {
           className="search-input"
           aria-label="Search for movies"
         />
+        {query && (
+          <button
+            type="button"
+            onClick={handleClear}
+            className="clear-button"
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+        )}
         <button type="submit" className="search-button" aria-label="Search">
           <svg
             xmlns="http://www.w3.org/2000/svg"

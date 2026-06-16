@@ -1,5 +1,5 @@
 import './Header.css'
-import SearchBar from './SearchBar'
+import SearchBar from '../SearchBar/SearchBar'
 
 const Header = ({ onSearch, currentQuery, onHomeClick }) => {
   return (
