@@ -75,6 +75,7 @@ const TrailerCarousel = ({ apiKey }) => {
 
   return (
     <div className="trailer-carousel">
+      <h2 className="trailer-carousel-title">Top 10 Trailers</h2>
       <div className="trailer-carousel-container">
         <button
           className="trailer-arrow trailer-arrow-left"

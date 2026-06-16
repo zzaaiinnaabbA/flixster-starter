@@ -51,7 +51,7 @@
 }
 
 .modal-close:hover {
-  background-color: var(--color-accent-purple);
+  background-color: var(--color-accent-orange);
   border-color: var(--color-accent-orange);
   transform: scale(1.1);
 }
