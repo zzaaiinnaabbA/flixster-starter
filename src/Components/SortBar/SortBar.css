@@ -7,7 +7,7 @@
   max-width: 1400px;
   margin: 0 auto;
   margin-bottom: var(--spacing-lg);
-  border-bottom: 1px solid rgba(177, 156, 217, 0.2);
+  border-bottom: 1px solid rgba(107, 70, 193, 0.2);
 }
 
 .sort-bar-label {
@@ -40,7 +40,7 @@
 .sort-bar-select:focus {
   outline: none;
   border-color: var(--color-accent-purple);
-  box-shadow: 0 0 0 2px rgba(177, 156, 217, 0.2);
+  box-shadow: 0 0 0 2px rgba(107, 70, 193, 0.2);
 }
 
 .sort-bar-select:focus-visible {

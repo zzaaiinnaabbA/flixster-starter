@@ -10,14 +10,14 @@
   --color-text-primary: #ffffff;
   --color-text-secondary: #cccccc;
   --color-text-tertiary: #888;
-  --color-accent-purple: #b19cd9;
-  --color-accent-purple-hover: #c9b8e0;
-  --color-accent-purple-dark: #8b7bb8;
-  --color-accent-purple-light: #ddd6fe;
+  --color-accent-purple: #6b46c1;
+  --color-accent-purple-hover: #7c3aed;
+  --color-accent-purple-dark: #5b21b6;
+  --color-accent-purple-light: #a78bfa;
   --color-accent-gold: #ffd700;
   --color-error: #ff4444;
-  --color-accent-orange: #14b8a6;
-  --color-accent-orange-hover: #0d9488;
+  --color-accent-orange: #10b981;
+  --color-accent-orange-hover: #34d399;
 
   /* Spacing */
   --spacing-xs: 4px;

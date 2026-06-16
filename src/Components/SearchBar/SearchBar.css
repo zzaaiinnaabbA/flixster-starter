@@ -25,7 +25,7 @@
 .search-input:focus {
   border-color: var(--color-accent-purple);
   background-color: var(--color-tertiary-dark);
-  box-shadow: 0 0 0 2px rgba(177, 156, 217, 0.2);
+  box-shadow: 0 0 0 2px rgba(107, 70, 193, 0.2);
 }
 
 .search-input::placeholder {
@@ -66,7 +66,7 @@
   align-items: center;
   justify-content: center;
   color: var(--color-text-primary);
-  background-color: var(--color-accent-orange);
+  background-color: var(--color-accent-purple);
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -79,7 +79,7 @@
 }
 
 .search-button:hover {
-  background-color: var(--color-accent-orange-hover);
+  background-color: var(--color-accent-purple-hover);
   transform: scale(1.05);
 }
 

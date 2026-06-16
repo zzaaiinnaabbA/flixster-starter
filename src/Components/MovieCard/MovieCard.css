@@ -120,7 +120,7 @@
 
 .watched-button.active {
   color: var(--color-accent-purple);
-  background-color: rgba(177, 156, 217, 0.2);
+  background-color: rgba(107, 70, 193, 0.2);
 }
 
 /* Visual distinction for favorited cards */
